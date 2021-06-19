@@ -28,6 +28,10 @@
     <th><?= $brg->harga ?></th>
     <th><?= $brg->stok ?></th>
     <th> <img src="<?= base_url().'uploads/'.$brg->gambar ?>" style="width: 10rem;" ></th>
+    <th>
+       <?php echo anchor('data_admin/edit_data/'.$brg->id_brg,'<div class="btn btn-success btn-sm"><i class="fa fa-search-plus"></i></div>')
+       ?>
+    </th>
     <th onClick="javacript : return confirm('hapus?')" >
      <?php echo anchor('data_admin/delete/'.$brg->id_brg,' <div class="btn btn-danger btn-sm"><i class="fa fa-trash "></i></div>')
       ?>
@@ -54,7 +58,7 @@
         </button>
       </div>
       <div class="modal-body">
-          <form method="post" action="insert_data">
+          <form method="post" action="insert_data" enctype="multipart/form-data">
               <div class="form-group">
                   <label>Nama Barang</label>
                   <input type="text" name="nama_brg" class="form-control">

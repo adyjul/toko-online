@@ -17,6 +17,22 @@
  		$stok			= $this->input->post('stok');
  		$gambar			= $this->input->post('gambar');
 
+ 		// $_FILES['gambar']['name'];
+
+ 		// if ($gambar = '') {
+ 			
+ 		// }else{
+ 		// 	$config['upload_path'] = './uploads';
+ 		// 	$config['allowed_types'] = 'jpg|jpeg|png|gif';
+
+ 		// 	$this->load->library('upload',$config);
+ 		// 	if ($this->upload->do_upload('gambar')) {
+ 		// 		echo "Gambar gagal diupload";
+ 		// 	}else{
+ 		// 		$gambar = $this->upload->data('file_name');
+ 		// 	}
+ 		// }
+
  		$data 	= array(
  				'nama_brg' => $nama_brg,
  				'keterangan'  => $keterangan,
